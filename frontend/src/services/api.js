@@ -1,9 +1,7 @@
 import axios from "axios";
 
-
 const API_URL =
-    "http://localhost:5000/api";
-
+    "https://smartfilter.onrender.com/api";
 
 export const uploadFile =
     async (file) => {
@@ -16,13 +14,11 @@ export const uploadFile =
             file
         );
 
-
         const response =
             await axios.post(
                 `${API_URL}/files/upload`,
                 formData
             );
-
 
         return response.data;
     };
